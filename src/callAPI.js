@@ -8,9 +8,9 @@ export default async function callAPI(location) {
     hightemp: responseInJSON.days[0].tempmax,
     lowtemp: responseInJSON.days[0].tempmin,
     wind: responseInJSON.days[0].windspeed,
-    description: responseInJSON.description
+    description: responseInJSON.days[0].description
 }
-  console.log(`whole data for ${location}`+dataObject);
+  console.log(responseInJSON);
   console.log("current temp "+dataObject.currenttemp);
   console.log("max temp "+dataObject.hightemp);
   console.log("min temp "+dataObject.lowtemp);
