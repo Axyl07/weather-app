@@ -1,3 +1,8 @@
+import callAPI from './callAPI'
+import './index.css';
+import formControl from './formControl';
 
-import './index.css'
+callAPI('delhi');
+formControl();
+// console.log('test')
 
