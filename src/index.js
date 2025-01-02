@@ -29,10 +29,10 @@ goButton.addEventListener("click", (event) => {
     const description = document.querySelector(".description");
   
     // FIll UI
-    currentTempDiv.textContent ='Current Temperature : '+ createdDataObject.currenttemp;
-    maxTempDiv.textContent ='Max Temperature : '+ createdDataObject.hightemp;
-    minTempDiv.textContent ='Min Temperature : '+ createdDataObject.lowtemp;
-    windSpeed.textContent ='Wind Speed : '+ createdDataObject.wind;
+    currentTempDiv.textContent ='Current Temperature : '+ createdDataObject.currenttemp+' degree Celcius';
+    maxTempDiv.textContent ='Max Temperature : '+ createdDataObject.hightemp+' degree Celcius';
+    minTempDiv.textContent ='Min Temperature : '+ createdDataObject.lowtemp+' degree Celcius';
+    windSpeed.textContent ='Wind Speed : '+ createdDataObject.wind+' kmph';
     description.textContent =' '+ createdDataObject.description;
    });
   event.preventDefault();
