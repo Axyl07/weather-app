@@ -16,12 +16,12 @@ goButton.addEventListener("click", (event) => {
             description: dataObject.days[0].description,
           };
     console.log(createdDataObject);
+    console.log(`for ${locationInputValue}:`);
     console.log("current temp " + createdDataObject.currenttemp);
     console.log("max temp " + createdDataObject.hightemp);
     console.log("min temp " + createdDataObject.lowtemp);
     console.log("windspeed " + createdDataObject.wind);
     console.log("description " + createdDataObject.description);
-    console.log(`for ${locationInputValue}:`);
     const currentTempDiv = document.querySelector(".currentTempDiv");
     const maxTempDiv = document.querySelector(".maxTempDiv");
     const minTempDiv = document.querySelector(".minTempDiv");
@@ -29,11 +29,11 @@ goButton.addEventListener("click", (event) => {
     const description = document.querySelector(".description");
   
     // FIll UI
-    currentTempDiv.textContent = createdDataObject.currenttemp;
-    maxTempDiv.textContent = createdDataObject.hightemp;
-    minTempDiv.textContent = createdDataObject.lowtemp;
-    windSpeed.textContent = createdDataObject.wind;
-    description.textContent = createdDataObject.description;
+    currentTempDiv.textContent ='Current Temperature : '+ createdDataObject.currenttemp;
+    maxTempDiv.textContent ='Max Temperature : '+ createdDataObject.hightemp;
+    minTempDiv.textContent ='Min Temperature : '+ createdDataObject.lowtemp;
+    windSpeed.textContent ='Wind Speed : '+ createdDataObject.wind;
+    description.textContent =' '+ createdDataObject.description;
    });
   event.preventDefault();
 });
