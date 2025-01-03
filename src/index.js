@@ -6,9 +6,12 @@ import "./index.css";
 
 const goButton = document.querySelector("#go");
 goButton.addEventListener("click", (event) => {
+  const loading = document.querySelector('.loading');
   const locationInputValue = document.querySelector("#locationInput").value;
   if (locationInputValue!='') {
+    loading.style.display = 'block'
     callAPI(locationInputValue).then(dataObject => {
+      loading.style.display = 'none'
       const createdDataObject = {
               currenttemp: dataObject.days[0].temp,
               hightemp: dataObject.days[0].tempmax,
@@ -70,6 +73,7 @@ goButton.addEventListener("click", (event) => {
       const errorDiv = document.querySelector('.error');
       errorDiv.textContent = `${locationInputValue}'s Weather Information:`;
     }).catch((e) => {
+      loading.style.display = 'none'
       const errorDiv = document.querySelector('.error');
       console.log(e)
       errorDiv.textContent = e;

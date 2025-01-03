@@ -124,3 +124,13 @@ input:focus {
 .error{
   font-size: 1.75em;
 }
+.loading{
+  background-image: url(./loading0.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 25%;
+  width: 25%;
+  position: absolute;
+  
+}
