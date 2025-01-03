@@ -1,20 +1,98 @@
+# Weather App
 
-# 1. How to run (for development):
-# 2. npm install
-# 3. npm run start (to run development server)
+This Weather App allows users to check the current weather conditions for any city worldwide. It provides real-time data including temperature, wind speed, and more.
 
-# 4. For Deployment:
-# 5. Make a new branch to deploy from by running git branch gh-pages. You only need to do this the first time you deploy. The rest of the steps should be done every time you deploy or redeploy your project.
-# 6. Make sure you have all your work committed. You can use git status to see if there’s anything that needs committing.
-# 7. Run `git checkout gh-pages && git merge main --no-edit` to change branch and sync your changes from main so that you’re ready to deploy.
-# 8. Now let’s bundle our application into dist with your build command. For now, that’s `npx webpack`.
-# 9. Now there are a few more commands. Run each of these in order:
+## Features
 
-`git add dist -f && git commit -m "Deployment commit"`
+- **Current Temperature**: Displays the current temperature in both Celsius and Fahrenheit.
+- **Weather Conditions**: Shows a brief description of the current weather (e.g., clear sky, rain).
+- **Wind**: Provides information on wind speed.
+- **Search Functionality**: Allows users to search for weather information by city name.
+
+## Built With
+
+- **HTML/CSS**: For structuring and styling the application.
+- **JavaScript**: For dynamic content and API interactions.
+- **Webpack**: To bundle JavaScript modules.
+- **Visual Crossing API**: For fetching real-time weather data.
+
+## Getting Started
+
+To get a local copy up and running, follow these steps:
+
+### Prerequisites
+
+- Node.js and npm installed on your machine.
+
+### Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/Axyl07/weather-app.git
+   ```
+
+2. **Navigate to the project directory**:
+
+   ```bash
+   cd weather-app
+   ```
+
+3. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+### Usage
+
+1. **Start the development server**:
+
+   ```bash
+   npm run start
+   ```
+
+2. **Open the application**:
+
+   Navigate to `http://localhost:8080` in your web browser to view the app.
+
+## Deployment
+
+To deploy the application, follow these steps:
+
+1. **Create a new branch for deployment** (if not already created):
+
+   ```bash
+   git branch gh-pages
+   ```
+
+2. **Merge the main branch into the deployment branch**:
+
+   ```bash
+   git checkout gh-pages
+   git merge main --no-edit
+   ```
+
+3. **Build the application**:
+
+   ```bash
+   npm run build
+   ```
+
+4. **Push the deployment branch to GitHub**:
+
+   ```bash
+   git push origin gh-pages
+   ```
+
+The application will be available at `https://axyl07.github.io/weather-app/`.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
 
-`git subtree push --prefix dist origin gh-pages`
+## Acknowledgements
 
-
-`git checkout main`
-# 10. Recall that the source branch for GitHub Pages is set in your repository’s settings. Get this changed to the `gh-pages` branch. That should be everything!
+- [VisualCrossing](https://visualcrossing.com/) for providing the weather data API.
+- [Webpack](https://webpack.js.org/) for module bundling.
