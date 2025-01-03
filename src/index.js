@@ -33,7 +33,13 @@ goButton.addEventListener("click", (event) => {
     maxTempDiv.textContent ='Max Temperature : '+ createdDataObject.hightemp+' degree Celcius';
     minTempDiv.textContent ='Min Temperature : '+ createdDataObject.lowtemp+' degree Celcius';
     windSpeed.textContent ='Wind Speed : '+ createdDataObject.wind+' kmph';
-    description.textContent =' '+ createdDataObject.description;
-   });
+    description.textContent = ' ' + createdDataObject.description;
+    const errorDiv = document.querySelector('.error');
+    errorDiv.textContent = '';
+  }).catch((e) => {
+    const errorDiv = document.querySelector('.error');
+    console.log(e)
+    errorDiv.textContent = e;
+  })
   event.preventDefault();
 });
