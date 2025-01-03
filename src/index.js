@@ -73,6 +73,16 @@ goButton.addEventListener("click", (event) => {
       const errorDiv = document.querySelector('.error');
       console.log(e)
       errorDiv.textContent = e;
+      const currentTempDiv = document.querySelector(".currentTempDiv");
+      const maxTempDiv = document.querySelector(".maxTempDiv");
+      const minTempDiv = document.querySelector(".minTempDiv");
+      const windSpeed = document.querySelector(".windSpeed");
+      const description = document.querySelector(".description");
+      currentTempDiv.style.display = 'none'
+      minTempDiv.style.display = 'none'
+      maxTempDiv.style.display = 'none'
+      windSpeed.style.display = 'none'
+      description.style.display = 'none'
     })
     event.preventDefault();
   } else {
