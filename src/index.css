@@ -1,9 +1,21 @@
+:root {
+  --cold: radial-gradient(
+    circle,
+    rgba(63, 251, 173, 1) 0%,
+    rgba(0, 224, 250, 1) 100%
+  );
+}
+
 body {
-width: 100vw;
-height: 100vh;
-  background: rgb(34,193,195);
-background: linear-gradient(22deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-  font-family: 'Inclusive Sans';
+  width: 100vw;
+  height: 100vh;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    22deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  font-family: "Inclusive Sans";
   font-weight: 700;
   display: flex;
   flex-direction: column;
@@ -11,84 +23,110 @@ background: linear-gradient(22deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100
   justify-content: center;
 }
 .main {
-  background: rgb(63,94,251);
-background: linear-gradient(22deg, rgba(63,94,251,1) 0%, rgba(0,226,252,1) 100%);
-    display: flex;
-    flex-direction: column;
-padding: 15px;
-gap: 15px;
-  height: 80vh;
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    22deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(0, 226, 252, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 15px;
+  /* height: 80vh; */
+  height: fit-content;
   max-width: 20vw;
   border: 5px solid black;
   border-radius: 10px;
-  box-shadow: 0px 0px 25px  rgb(2,0,36) ;
+  box-shadow: 0px 0px 25px rgb(2, 0, 36);
   min-width: 40vw;
 }
 form {
   font-size: 1.5em;
   height: 8vh;
 }
-input{
+input {
   margin: 15px 0px;
-padding: 1px 10px;
-background: rgba(255, 255, 255, 0.21);
-border-radius: 15px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(4.7px);
--webkit-backdrop-filter: blur(4.7px);
-border: 1px solid rgba(255, 255, 255, 1);
+  padding: 1px 10px;
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 1);
   font-size: 1.5rem;
-
 }
-input:focus{
+input:focus {
   outline: none;
   background-color: cyan;
 }
-#go{
+#go {
   cursor: pointer;
   padding: 2px 10px;
-font-size: 1.5rem;
-background: rgba(255, 255, 255, 0.21);
-border-radius: 15px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(4.7px);
--webkit-backdrop-filter: blur(4.7px);
-border: 1px solid rgba(255, 255, 255, 1);
-transition: 0.1s ease-in;
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  transition: 0.1s ease-in;
 }
-#go:hover{
- transform: scale(1.05);
+#go:hover {
+  transform: scale(1.05);
 }
 .maxAndminTempDiv {
-    gap: 15px;
-    display: flex;
+  gap: 5px;
+  display: flex;
   border-radius: 10px;
   height: 15vh;
-  width: 102%;
+  width: 100%;
   align-items: center;
 }
-.currentTempDiv,.maxTempDiv,.minTempDiv,.windSpeed,.description {
+.currentTempDiv,
+.maxTempDiv,
+.minTempDiv,
+.windSpeed,
+.description {
   color: black;
-  font-size: 1.7em;
+  font-size: 1.8em;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 5px;
   align-items: center;
-border-radius: 10px;
+  border-radius: 10px;
   height: 15vh;
   width: 99%;
   border: 1px solid black;
-    transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  /* background: var(--cold); */
 }
+.minTempDiv{
+  width: 90%;
+}
+.windSpeed{
 
-.currentTempDiv:hover,.maxTempDiv:hover,.minTempDiv:hover,.windSpeed:hover,.description:hover{
+  align-items: flex-start;
+  background-image: url(./wind.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.currentTempDiv:hover,
+.maxTempDiv:hover,
+.minTempDiv:hover,
+.windSpeed:hover,
+.description:hover {
   cursor: pointer;
   transform: scale(1.02);
   background: rgba(255, 255, 255, 0.21);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(4.7px);
--webkit-backdrop-filter: blur(4.7px);
-border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+.error{
+  font-size: 1.75em;
 }
